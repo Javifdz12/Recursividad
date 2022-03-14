@@ -33,7 +33,7 @@ def normalizar(x):
     x=x_normalizado.translate(caracteres)
     return x
 
-frase=str(input("escribe algo"))   
+frase=str(input("escribe algo"))
 frase=normalizar(frase)
 print(frase)
 
@@ -51,6 +51,6 @@ def palindromo2(frase):
 
     return a
 
-palindromo2(frase)
+print(palindromo2(frase))
 
 
