@@ -8,7 +8,7 @@ def creardiccionario():
         while palabra in diccionario:
             palabra = input('Introduce una palabra que sea nueva por favor:\n')
         diccionario.append(palabra)
-    
+
     return diccionario
 def orden(diccionario):
     n = len(diccionario)
@@ -16,12 +16,12 @@ def orden(diccionario):
     siguiente = [0]*n
     # Ordenamos el diccionario
     diccionario_ordenado = sorted(diccionario)
-    
+
     # La anterior a la primera palabra seá la última
     temp = diccionario.index(diccionario_ordenado[-1])
     # La posterior a la última palabra será la primera
     temp2 = diccionario.index(diccionario_ordenado[0])
-    
+
     for i in range(n):
         for j in range(n):
             if diccionario[j] == diccionario_ordenado[i]:
@@ -32,12 +32,12 @@ def orden(diccionario):
             if diccionario[j] == diccionario_ordenado[i]:
                 siguiente[j] = temp2
                 temp2 = j
-    
+
     tabla = pd.DataFrame()
     tabla['diccionario'] = diccionario
     tabla['anterior'] = anterior
     tabla['siguiente'] = siguiente
-    
+
     return tabla
 
 def buscar(lista, dato, i = 0, nueva = list()):
