@@ -38,7 +38,7 @@ frase=normalizar(frase)
 print(frase)
 
 def palindromo2(frase):
-    i = 0 
+    i = 0
     j = -1
     a = True
     if i >= len(frase):
