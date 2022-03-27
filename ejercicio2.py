@@ -36,18 +36,17 @@ def normalizar(x):
 frase=str(input("escribe algo"))
 frase=normalizar(frase)
 print(frase)
+print(frase[-1])
+print(frase[-2])
 
-def palindromo2(frase):
-    i = 0
-    j = -1
-    a = True
-    if i >= len(frase):
-        if a == True:
-            if frase[i] != frase[j]:
-                a = False
-        i += 1
-        j -= 1
-        palindromo2(frase, i, j, a)
+def palindromo2(frase,i=0,j=-1,a=True):
+
+    for i in range(len(frase)):
+        if frase[i] != frase[j]:
+            a = False
+        else:
+            j -= 1
+            palindromo2(frase, i, j, a)
 
     return a
 
