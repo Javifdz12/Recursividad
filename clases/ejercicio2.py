@@ -33,22 +33,24 @@ def normalizar(x):
     x=x_normalizado.translate(caracteres)
     return x
 
-frase=str(input("escribe algo"))
+frase=str(input("escribe algo: "))
 frase=normalizar(frase)
 print(frase)
-print(frase[-1])
-print(frase[-2])
 
 def palindromo2(frase,i=0,j=-1,a=True):
 
-    for i in range(len(frase)):
+    for i in range(len(frase)-1):
         if frase[i] != frase[j]:
             a = False
         else:
-            j -= 1
-            palindromo2(frase, i, j, a)
-
+            if j==-len(frase):
+                a=True
+            else:
+                j -= 1
+                palindromo2(frase, i, j, a)
     return a
+
+
 
 print(palindromo2(frase))
 

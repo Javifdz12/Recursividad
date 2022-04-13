@@ -22,7 +22,7 @@ for c in fichas_sin_colocar:
         fichas_frecuencia[c]+=1
     else:
         fichas_frecuencia[c]=1
-          
+
 print(fichas_frecuencia)
 
     
